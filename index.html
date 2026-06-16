@@ -9,17 +9,14 @@
 <body>
   <h1>Alt Text Fix Test</h1>
 
-  <p>This page exists to exercise the missing-alt case. The image below has a
-     literal, unique src and no alt attribute, so a crawl should raise
-     AI_ALT_TEXT_ADDED for it.</p>
+  <p>This page exists to exercise the missing-alt case. The image below loads from
+     a real URL and has no alt attribute, so a crawl should raise AI_ALT_TEXT_ADDED.</p>
 
-  <p>Here is a photo of our corner bakery on opening morning, with fresh loaves
-     stacked in the front window:</p>
+  <p>Here is a photo to describe:</p>
 
-  <img src="images/bakery-storefront.jpg" width="800" height="500">
+  <img src="https://picsum.photos/seed/bakery/800/500" width="800" height="500">
 
-  <p>The surrounding text and the filename give the alt generator enough context
-     to produce descriptive alt text. There are deliberately no other images and
-     no weak title or description, so this should be the only AI fix on the page.</p>
+  <p>One image, real fetchable bytes, no alt, no other images, solid title and
+     description — so this should be the only AI fix on the page.</p>
 </body>
 </html>
